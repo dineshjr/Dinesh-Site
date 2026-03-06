@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<title>Dineshkumar Thangaraj — Frontend Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={darkMode:['attribute','[data-theme="dark"]'],theme:{extend:{}}}</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- CURSOR -->
+<div id="cur-dot"></div>
+<div id="cur-ring"></div>
+<!-- PROGRESS -->
+<div id="prog"></div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mob">
+  <a href="#about" onclick="cMob()">ABOUT</a>
+  <a href="#work" onclick="cMob()">WORK</a>
+  <a href="#skills" onclick="cMob()">SKILLS</a>
+  <a href="#edu" onclick="cMob()">EDUCATION</a>
+  <a href="#contact" onclick="cMob()">CONTACT</a>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-logo f-mono">DT<span>.</span></div>
+  <div class="nav-links">
+    <a href="#about" class="nav-link f-mono">ABOUT</a>
+    <a href="#work" class="nav-link f-mono">WORK</a>
+    <a href="#skills" class="nav-link f-mono">SKILLS</a>
+    <a href="#edu" class="nav-link f-mono">EDU</a>
+    <a href="#contact" class="nav-link f-mono">CONTACT</a>
+  </div>
+  <div class="nav-right">
+    <button id="theme-btn" onclick="toggleTheme()" aria-label="Toggle theme"></button>
+    <button class="ham" id="ham" onclick="tMob()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════ HERO -->
+<section class="hero">
+  <div class="hero-bg-text f-display" aria-hidden="true">FE</div>
+  <div class="hero-grid">
+    <!-- left -->
+    <div style="position:relative;z-index:1">
+      <div class="hero-label f-mono rv d1">FRONTEND ENGINEER</div>
+      <h1 class="hero-name f-display rv d2">
+        DINESH
+        <span class="acc">KUMAR</span>
+        THANGARAJ
+      </h1>
+    </div>
+    <!-- right -->
+    <div class="hero-right rv d3">
+      <p class="hero-tagline">Crafting performant, scalable web experiences with <em style="color:var(--ink);font-style:normal">ReactJS</em>, <em style="color:var(--ink);font-style:normal">Redux Toolkit</em> &amp; modern JavaScript — 3+ years turning complex requirements into elegant interfaces.</p>
+      <div class="hero-stats rv d4">
+        <div class="hero-stat">
+          <div class="hero-stat-n f-display">3+</div>
+          <div class="hero-stat-l f-mono">YRS EXP</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-n f-display">35%</div>
+          <div class="hero-stat-l f-mono">LEAD BOOST</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-n f-display">30%</div>
+          <div class="hero-stat-l f-mono">BUG DROP</div>
+        </div>
+      </div>
+      <a href="#contact" class="hero-cta f-mono rv d5">
+        <span>GET IN TOUCH</span>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="hero-bottom rv d6">
+    <div class="hero-scroll f-mono"><div class="scroll-line"></div>SCROLL</div>
+    <div class="f-mono" style="font-size:11px;letter-spacing:.1em;color:var(--muted)">Chennai · Open to Relocate</div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="mq-wrap">
+  <div class="mq-inner">
+    <div class="mq-item f-mono"><b>ReactJS</b></div>
+    <div class="mq-item f-mono">Redux Toolkit</div>
+    <div class="mq-item f-mono"><b>TypeScript</b></div>
+    <div class="mq-item f-mono">Tailwind CSS</div>
+    <div class="mq-item f-mono"><b>Vite</b></div>
+    <div class="mq-item f-mono">Firebase</div>
+    <div class="mq-item f-mono"><b>Jest</b></div>
+    <div class="mq-item f-mono">Git / GitHub</div>
+    <div class="mq-item f-mono"><b>SPA Architecture</b></div>
+    <div class="mq-item f-mono">Responsive Design</div>
+    <div class="mq-item f-mono"><b>API Integration</b></div>
+    <div class="mq-item f-mono">UI/UX</div>
+    <div class="mq-item f-mono"><b>ReactJS</b></div>
+    <div class="mq-item f-mono">Redux Toolkit</div>
+    <div class="mq-item f-mono"><b>TypeScript</b></div>
+    <div class="mq-item f-mono">Tailwind CSS</div>
+    <div class="mq-item f-mono"><b>Vite</b></div>
+    <div class="mq-item f-mono">Firebase</div>
+    <div class="mq-item f-mono"><b>Jest</b></div>
+    <div class="mq-item f-mono">Git / GitHub</div>
+    <div class="mq-item f-mono"><b>SPA Architecture</b></div>
+    <div class="mq-item f-mono">Responsive Design</div>
+    <div class="mq-item f-mono"><b>API Integration</b></div>
+    <div class="mq-item f-mono">UI/UX</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ ABOUT -->
+<section id="about">
+  <div class="sec-tag f-mono rv">01 — PROFILE</div>
+  <h2 class="sec-title f-display rv d1">WHO I AM</h2>
+  <div class="about-grid">
+    <div class="rv-l d2">
+      <div class="about-card">
+        <div class="about-avatar">🧑‍💻</div>
+        <div class="about-name-c">Dineshkumar Thangaraj</div>
+        <div class="about-title-c f-mono">FRONTEND ENGINEER</div>
+        <div class="about-row"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>+91-70106 08027</div>
+        <div class="about-row"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5-10-5"/></svg>dineshkumar73717@gmail.com</div>
+        <div class="about-row"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Chennai, India · Open to Relocate</div>
+        <div style="margin-top:14px" class="pill-wrap">
+          <span class="pill f-mono">LinkedIn ↗</span>
+          <span class="pill f-mono">GitHub ↗</span>
+          <span class="pill f-mono">Portfolio ↗</span>
+        </div>
+      </div>
+    </div>
+    <div class="about-text rv-r d3">
+      <p class="about-p">Results-driven Frontend Engineer with <em>3+ years of experience</em> developing, optimising, and maintaining scalable web applications. Adept at UI/UX optimisation, cross-browser compatibility, and responsive design.</p>
+      <p class="about-p">Proven ability to collaborate with <em>cross-functional teams</em> — backend, QA, design — to deliver user-centric solutions aligned with business goals. Passionate about <em>clean code</em>, performance optimisation, and modern frontend architecture.</p>
+      <div class="pill-wrap rv d4">
+        <span class="pill f-mono">ReactJS</span><span class="pill f-mono">Redux Toolkit</span><span class="pill f-mono">TypeScript</span><span class="pill f-mono">Tailwind CSS</span><span class="pill f-mono">Vite</span><span class="pill f-mono">Firebase</span><span class="pill f-mono">Jest</span><span class="pill f-mono">Git</span><span class="pill f-mono">Responsive Design</span><span class="pill f-mono">SPA</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════ WORK -->
+<section id="work">
+  <div class="sec-tag f-mono rv">02 — EXPERIENCE</div>
+  <h2 class="sec-title f-display rv d1">WHERE I'VE<br/>BUILT THINGS</h2>
+  <div>
+    <!-- Job 1 -->
+    <div class="exp-item rv d2">
+      <div class="exp-date f-mono"><span class="exp-dot"></span>2024<br/>PRESENT</div>
+      <div>
+        <div class="exp-company f-mono">NOVAC TECHNOLOGY SOLUTIONS</div>
+        <div class="exp-role f-display">Software Engineer — <span style="color:var(--accent)">Frontend</span></div>
+        <p class="exp-desc">Spearheaded frontend development of the <strong>Pan-India Shriram Chits Application</strong> — built from scratch, unifying TN, AP &amp; MH state-level systems into one centralised platform. Engineered the <strong>Shriram Chits CRM</strong> for multi-channel lead management with pincode-based branch allocation and comprehensive reporting modules.</p>
+        <div class="kpis">
+          <div class="kpi"><span class="kpi-n">35%</span><span class="kpi-l f-mono">LEAD EFFICIENCY ↑</span></div>
+          <div class="kpi"><span class="kpi-n">30%</span><span class="kpi-l f-mono">BUG REDUCTION ↓</span></div>
+          <div class="kpi"><span class="kpi-n">3</span><span class="kpi-l f-mono">STATES UNIFIED</span></div>
+        </div>
+        <div class="stags">
+          <span class="stag f-mono">ReactJS</span><span class="stag f-mono">Redux Toolkit</span><span class="stag f-mono">TypeScript</span><span class="stag f-mono">Tailwind CSS</span><span class="stag f-mono">Vite</span><span class="stag f-mono">REST APIs</span><span class="stag f-mono">Git</span>
+        </div>
+      </div>
+    </div>
+    <!-- Job 2 -->
+    <div class="exp-item rv d3">
+      <div class="exp-date f-mono"><span class="exp-dot" style="background:var(--muted);box-shadow:none"></span>2022<br/>2024</div>
+      <div>
+        <div class="exp-company f-mono">CAMEO CORPORATE SERVICES</div>
+        <div class="exp-role f-display">Frontend <span style="color:var(--accent)">Engineer</span></div>
+        <p class="exp-desc">Developed and maintained single-page applications using ReactJS, Redux Toolkit, HTML5, CSS3 and JavaScript. Integrated backend APIs, streamlining data flow. Delivered pixel-perfect UIs through close design collaboration and improved app performance via scalable architecture decisions.</p>
+        <div class="stags">
+          <span class="stag f-mono">ReactJS</span><span class="stag f-mono">Redux Toolkit</span><span class="stag f-mono">JavaScript ES6+</span><span class="stag f-mono">HTML5</span><span class="stag f-mono">CSS3</span><span class="stag f-mono">REST APIs</span><span class="stag f-mono">Git</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════ SKILLS -->
+<section id="skills">
+  <div class="sec-tag f-mono rv">03 — SKILLS</div>
+  <h2 class="sec-title f-display rv d1">TECHNICAL<br/><span style="background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">ARSENAL</span></h2>
+  <div class="skills-grid rv d2">
+    <div class="skill-cat">
+      <div class="skill-cat-title f-mono">CORE LANGUAGES</div>
+      <div class="skill-row"><div class="skill-label"><span class="skill-name">HTML5 / CSS3</span><span class="skill-pct">95%</span></div><div class="skill-track"><div class="skill-bar" data-w="95"></div></div></div>
+      <div class="skill-row"><div class="skill-label"><span class="skill-name">JavaScript ES6+</span><span class="skill-pct">92%</span></div><div class="skill-track"><div class="skill-bar" data-w="92"></div></div></div>
+      <div class="skill-row"><div class="skill-label"><span class="skill-name">TypeScript</span><span class="skill-pct">84%</span></div><div class="skill-track"><div class="skill-bar" data-w="84"></div></div></div>
+    </div>
+    <div class="skill-cat">
+      <div class="skill-cat-title f-mono">FRAMEWORKS / LIBS</div>
+      <div class="skill-row"><div class="skill-label"><span class="skill-name">ReactJS</span><span class="skill-pct">95%</span></div><div class="skill-track"><div class="skill-bar" data-w="95"></div></div></div>
+      <div class="skill-row"><div class="skill-label"><span class="skill-name">Redux Toolkit</span><span class="skill-pct">90%</span></div><div class="skill-track"><div class="skill-bar" data-w="90"></div></div></div>
+      <div class="skill-row"><div class="skill-label"><span class="skill-name">Tailwind CSS</span><span class="skill-pct">90%</span></div><div class="skill-track"><div class="skill-bar" data-w="90"></div></div></div>
+    </div>
+    <div class="skill-cat">
+      <div class="skill-cat-title f-mono">BUILD TOOLS</div>
+      <div class="skill-row"><div class="skill-label"><span class="skill-name">Vite</span><span class="skill-pct">85%</span></div><div class="skill-track"><div class="skill-bar" data-w="85"></div></div></div>
+      <div class="skill-row"><div class="skill-label"><span class="skill-name">esBuild</span><span class="skill-pct">78%</span></div><div class="skill-track"><div class="skill-bar" data-w="78"></div></div></div>
+      <div class="skill-row"><div class="skill-label"><span class="skill-name">Git / GitHub</span><span class="skill-pct">92%</span></div><div class="skill-track"><div class="skill-bar" data-w="92"></div></div></div>
+    </div>
+    <div class="skill-cat">
+      <div class="skill-cat-title f-mono">TESTING & OTHER</div>
+      <div class="skill-row"><div class="skill-label"><span class="skill-name">Jest</span><span class="skill-pct">80%</span></div><div class="skill-track"><div class="skill-bar" data-w="80"></div></div></div>
+      <div class="skill-row"><div class="skill-label"><span class="skill-name">React Testing Library</span><span class="skill-pct">78%</span></div><div class="skill-track"><div class="skill-bar" data-w="78"></div></div></div>
+      <div class="skill-row"><div class="skill-label"><span class="skill-name">Firebase</span><span class="skill-pct">76%</span></div><div class="skill-track"><div class="skill-bar" data-w="76"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════ EDUCATION -->
+<section id="edu">
+  <div class="sec-tag f-mono rv">04 — EDUCATION</div>
+  <h2 class="sec-title f-display rv d1">ACADEMIC<br/>ROOTS</h2>
+  <div class="edu-card rv d2">
+    <div class="edu-left">
+      <div class="edu-year f-mono">2018 — 2021</div>
+      <div class="edu-degree">Bachelor of Commerce</div>
+      <div class="edu-sub">(Computer Applications)</div>
+      <div class="edu-divider"></div>
+      <div class="edu-school">Ramakrishna Mission Vivekananda College<br/><span class="f-mono" style="font-size:12px;opacity:.5;letter-spacing:.1em">Chennai, India</span></div>
+    </div>
+    <div class="edu-right">
+      <blockquote class="edu-quote">"A unique blend of business acumen and technical computing foundations — understanding both user needs and the engineering required to serve them."</blockquote>
+      <div class="edu-badges">
+        <div class="edu-badge"><span class="edu-badge-n f-display">B.COM</span><span class="edu-badge-l f-mono">DEGREE</span></div>
+        <div class="edu-badge"><span class="edu-badge-n f-display">CS</span><span class="edu-badge-l f-mono">SPECIALISATION</span></div>
+        <div class="edu-badge"><span class="edu-badge-n f-display">3YR</span><span class="edu-badge-l f-mono">DURATION</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════ CONTACT -->
+<section id="contact">
+  <div class="contact-grid">
+    <div>
+      <div class="sec-tag f-mono rv">05 — CONTACT</div>
+      <h2 class="contact-big f-display rv d1">LET'S<span class="line2">BUILD.</span></h2>
+      <p class="contact-sub rv d2">Available for new opportunities. Passionate about clean code, performance optimisation &amp; modern frontend architecture.</p>
+    </div>
+    <div class="rv-r d3">
+      <div class="contact-cards">
+        <a href="mailto:dineshkumar73717@gmail.com" class="contact-card">
+          <div class="contact-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5-10-5"/></svg></div>
+          <div class="contact-info"><div class="contact-lbl f-mono">EMAIL</div><div class="contact-val">dineshkumar73717@gmail.com</div></div>
+        </a>
+        <a href="tel:+917010608027" class="contact-card">
+          <div class="contact-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div class="contact-info"><div class="contact-lbl f-mono">PHONE</div><div class="contact-val">+91-70106 08027</div></div>
+        </a>
+        <div class="contact-card" style="cursor:default">
+          <div class="contact-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="contact-info"><div class="contact-lbl f-mono">LOCATION</div><div class="contact-val">Chennai, India — Open to Relocate</div></div>
+        </div>
+      </div>
+      <div class="cta-row">
+        <a href="https://linkedin.com" target="_blank" class="cta-btn primary f-mono"><span>LINKEDIN</span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+        <a href="https://github.com" target="_blank" class="cta-btn f-mono"><span>GITHUB</span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+        <a href="#" class="cta-btn f-mono"><span>RESUME PDF</span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-l f-mono">© 2025 DINESHKUMAR THANGARAJ</div>
+  <div class="foot-r f-mono">DESIGNED WITH <span>♥</span> — FRONTEND ENGINEER</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
